@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  json-server:
+    build:
+      context: .
+    ports:
+      - "3000:3000" # Maps host port 3000 to container port 3000
+    volumes:
+      - ./data.json:/data/data.json:ro # Bind-mount the data.json file in read-only mode
